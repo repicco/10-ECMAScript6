@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+            //3 escopos: global, função e bloco (retorna ao escopo superior)
+            //Usando o Var o Bloco retorna a variavel para o escopo maior (Função ou Global)
+            //Usando o Let o Bloco mantém a variavel travada.
+            //global
+            let serie = 'Friends'
+
+            function x() {
+                //função
+                if (true) {
+                    //bloco
+                    let serie = 'Game of Thrones'
+                    console.log ('Bloco da função: '+ serie)
+                }
+                console.log ('Função: '+ serie)
+            }
+
+            x()
+
+            if (true) {
+                //bloco
+                console.log ('Bloco Global: '+ serie)
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>
