@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="js/babel.min.js"></script>
+
+        <script type="text/babel">
+            
+            //Function comum
+            /*
+            let quadrado = function (x = 1) {
+                return x * x 
+            }*/
+            
+            //Arrow Function
+            let quadrado = x => x * x 
+            //sem parametros não precisa de () e o return implicito
+
+            document.write( quadrado (3) + '<br>')
+
+            //Function com mais de 1 comando
+            /*
+            let parImpar = numero => {
+                if (numero % 2 === 0 ) {
+                    return 'Par'
+                } else {
+                    return 'Impar'
+                }
+            }*/
+
+            //Function com Arrow + Ternario
+            let parImpar = numero => numero % 2 === 0 ? 'Par' : 'Impar'
+
+
+            document.write(parImpar(5))
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>

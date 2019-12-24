@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="js/babel.min.js"></script>
+
+        <script type="text/babel">
+            function contarHistoria(personagem = 'Roger', atividade = 'correr', nome = 'João') {
+                document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome} e eles viveram felizes para sempre`)
+            }
+
+            contarHistoria(undefined, 'enterrar ossos', 'Pedro')
+            //podemos utilizar os parametros default sem informar ou mensionando undefined
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>
