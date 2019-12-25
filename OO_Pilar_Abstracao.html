@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="js/babel.min.js"></script>
+
+        <script type="text/babel">
+            //modelo do objeto
+            class ContaBancaria {
+                //caracteristicas do objeto
+                
+                //agencia
+                //numeroConta
+                //saldo
+                //limite
+                constructor () {
+                    this.agencia = 1075
+                    this.numeroConta = 8351125
+                    this.saldo = 50
+                    this.limite = 450
+                }
+
+                //ações do objeto
+                depositar(valorDeposito) {
+                    this.saldo += valorDeposito
+                }
+
+                sacar(valorSaque) {
+                    this.saldo -= valorSaque
+                }
+
+                consultaSaldo() {
+                    return this.saldo
+                }
+            }
+
+            let x = new ContaBancaria()
+            let y = new ContaBancaria()
+
+            console.log(x.consultaSaldo())
+            x.depositar(450)
+            console.log(x.consultaSaldo())
+            x.sacar(200)
+            console.log(x.consultaSaldo())
+
+            console.log(y.consultaSaldo())
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>
