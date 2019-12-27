@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="js/babel.min.js"></script>
+
+        <script type="text/babel">
+            //Classe Pai/Superclasse
+            class Animal {
+                constructor(cor, tamanho, peso){
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir(){
+                    console.log('Dormir')
+                }
+            }
+
+            //Classes Filhos/Subclasses
+            class Passaro extends Animal {
+                constructor(bico, cor, tamanho, peso){
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar(){
+                    console.log('Voar')
+                }
+
+            }
+
+            class Papagaio extends Passaro {
+                constructor(sabeFalar, bico, cor, tamanho, peso){
+                    super(bico, cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar(){
+                    console.log('Falar')
+                }
+            }
+
+            let papagaio = new Papagaio(true, 'Médio', 'Verde', 25, 350)
+            console.log(papagaio)
+
+            let papagaio2 = new Papagaio(false, 'Curto', 'Branco', 10, 100)
+            console.log(papagaio2)
+
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>
