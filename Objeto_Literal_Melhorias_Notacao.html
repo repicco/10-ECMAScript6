@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="js/babel.min.js"></script>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>Form</legend>
+                <label for="">Nome:
+                    <input type="text" id="nome">
+                </label><br><br>
+                <label for="">Idade:
+                    <input type="number" id="idade">
+                </label><br>
+                <label for="">Sexo:<br>
+                    <input type="text" id="sexo">
+                </label><br><br>
+                <label for="">Profissão:
+                    <input type="text" id="profissao">
+                </label><br>
+
+                <button type="button" onclick="gravar()">Gravar</button>
+                <button type="button" class="btn btn-dark" onclick="objeto.exibirResumo()">Validar</button>
+                    
+            </fieldset>
+
+        </form>
+        <script type="text/babel">
+            
+            function gravar() {
+                let nome = document.getElementById('nome')
+                let idade = document.getElementById('idade')
+                let sexo = document.getElementById('sexo')
+                let profissao = document.getElementById('profissao')
+            }
+            
+            let objeto = {
+                nome,
+                idade,
+                sexo,
+                profissao,
+                exibirResumo() {
+                    console.log(`${this.nome.value}, ${this.idade.value} anos, ${this.sexo.value} é ${this.profissao.value}`)
+                }
+            }
+
+            console.log(objeto)
+            objeto.exibirResumo()
+            
+        </script>
+    </body>
+</html>
