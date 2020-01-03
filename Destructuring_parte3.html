@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="js/babel.min.js"></script>
+
+        <script type="text/babel">
+            
+            //Array com function
+            let arr = [10, 20, 30, 40]
+
+            function teste([ a, b, , c, d = 100 ]) {
+                console.log(a, b, c, d)
+            }
+
+            teste(arr)
+
+
+            let obj = {
+                a: 100,
+                b: 200,
+                c: 300,
+                d: 400
+            }
+
+            function teste2({ a: x, b, c, z = 10}) {
+                console.log(x, b, c, z)
+            }
+
+            teste2(obj)
+
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>
