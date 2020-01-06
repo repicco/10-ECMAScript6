@@ -235,12 +235,15 @@ function carregaListaDespesas(despesas = Array(), filtro = false){
         //valida em despesas o total
         despesas.forEach(function(item){
             total += Number(item.valor)
+            vTotal = total
         })
         
-        linha.insertCell(5).innerHTML = total
+        
+        document.getElementById('total').innerHTML = `Total: ${vTotal}`
+        
+
      })
 }
-
 
 function pesquisarDespesa(){
     let ano = document.getElementById('ano').value
@@ -257,8 +260,3 @@ function pesquisarDespesa(){
     carregaListaDespesas(despesas, true)
 
 }
-
-let geral = bd.recuperarTodosRegistros()
-
-
-
