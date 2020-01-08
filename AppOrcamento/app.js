@@ -195,21 +195,27 @@ function carregaListaDespesas(despesas = Array(), filtro = false){
          
          //ajustar o tipo
             switch(d.tipo) {
-                 case '1': d.tipo = 'Alimentação'
+                 case '1': d.tipo = 'Crédito'
                      break
-              case '2': d.tipo = 'Educação'
+              case '2': d.tipo = 'Mensal'
                      break
                  case '3': d.tipo = 'Lazer'
                      break
                  case '4': d.tipo = 'Saúde'
                      break
-                 case '5': d.tipo = 'Transporte'
+                 case '5': d.tipo = 'Extra'
                      break
              }
          linha.insertCell(1).innerHTML = d.tipo
  
          linha.insertCell(2).innerHTML = d.descricao
-         linha.insertCell(3).innerHTML = d.valor
+
+         if (d.tipo == 'Crédito') {
+            linha.insertCell(3).innerHTML = d.valor
+         } else {
+            linha.insertCell(3).innerHTML = d.valor * -1
+            d.valor = d.valor * -1
+         }
 
         //criar botão de exclusão por linha
         let btn =  document.createElement('button')
