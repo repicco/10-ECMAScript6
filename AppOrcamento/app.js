@@ -210,9 +210,7 @@ function carregaListaDespesas(despesas = Array(), filtro = false){
  
          linha.insertCell(2).innerHTML = d.descricao
 
-         if(d.tipo == 'Crédito*'){
-            d.valor = d.valor
-         } else {
+         if(d.tipo != 'Crédito*'){
             d.valor = d.valor * -1
          }
         
